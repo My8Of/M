@@ -12,6 +12,7 @@
   "type": "commonjs",
   "dependencies": {
     "axios": "^1.13.2",
+    "cheerio": "^1.1.2",
     "rss-parser": "^3.13.0",
     "winston": "^3.19.0"
   }
