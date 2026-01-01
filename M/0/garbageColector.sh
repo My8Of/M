@@ -5,8 +5,8 @@ GREEN='\033[0;32m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-SOURCE_FILE="M/0/.links"
-LOG_FILE="M/0/status_fontes.log"
+SOURCE_FILE=".links"
+LOG_FILE="status_fontes.log"
 
 echo "--- Verificação de Integridade das Fontes $(date) ---" > "$LOG_FILE"
 
