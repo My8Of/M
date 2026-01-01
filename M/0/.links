@@ -1,0 +1,5 @@
+# Nome | URL | Camada
+Psbdmp|https://psbdmp.ws/api/v/last|3
+PacketStorm|https://rss.packetstormsecurity.com/files/|2
+ExploitDB|https://www.exploit-db.com/rss.xml|2
+FullDisclosure|http://seclists.org/rss/fulldisclosure.rss|2
