@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  # O motor que mergulha no abismo
+  sniffer:
+    build: .
+    container_name: m_sniffer
+    restart: always
+    command: node M/3/sniffer.js
+    volumes:
+      - ./M/0:/app/M/0
+      - ./M/4:/app/M/4
+
+  # O coletor de inteligência de superfície
+  spider:
+    build: .
+    container_name: m_spider
+    restart: always
+    command: node M/2/spider.js
+    volumes:
+      - ./M/0:/app/M/0
