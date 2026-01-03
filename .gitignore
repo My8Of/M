@@ -1,6 +1,6 @@
 #Modules
 node_modules
-
+mysql_data
 
 # Local varibles
 .env

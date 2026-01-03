@@ -151,3 +151,23 @@
 {"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T11:53:10.303Z"}
 {"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T11:54:11.095Z"}
 {"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T11:55:11.024Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T12:08:11.974Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T12:10:11.941Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T12:24:13.357Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T12:26:13.469Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T12:30:13.859Z"}
+{"level":"error","message":"Falha no alvo RentryRecent: Error","timestamp":"2026-01-01T12:36:13.586Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T12:36:13.854Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T12:37:15.064Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T12:38:15.512Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T12:39:14.690Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T12:48:15.298Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T12:55:16.419Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T12:56:16.033Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T13:01:16.861Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T13:02:17.089Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T13:03:16.821Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-01T13:10:18.004Z"}
+{"level":"error","message":"Falha no alvo RentryRecent: read ECONNRESET","timestamp":"2026-01-01T13:15:28.441Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: getaddrinfo EAI_AGAIN justpaste.it","timestamp":"2026-01-01T13:15:33.480Z"}
+{"level":"error","message":"Falha no alvo JustPasteIt: Error","timestamp":"2026-01-02T22:30:38.535Z"}

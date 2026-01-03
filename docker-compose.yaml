@@ -1,21 +1,49 @@
-version: '3.8'
+version: "3.8"
 
 services:
-  # O motor que mergulha no abismo
-  sniffer:
-    build: .
-    container_name: m_sniffer
+  # O Banco de Dados
+  db:
+    image: mariadb:latest
+    container_name: spider_db
     restart: always
-    command: node M/3/sniffer.js
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASS}
     volumes:
-      - ./M/0:/app/M/0
-      - ./M/4:/app/M/4
+      - ./mysql_data:/var/lib/mysql
+    networks:
+      - spider_net
 
-  # O coletor de inteligência de superfície
-  spider:
-    build: .
-    container_name: m_spider
+  # O Túnel Tor (Existem imagens prontas e leves)
+  tor:
+    image: pickapp/tor-proxy:latest
+    container_name: spider_tor
     restart: always
-    command: node M/2/spider.js
+    ports:
+      - "9050:9050"
+    networks:
+      - spider_net
+
+  # O Nosso Minerador
+  miner:
+    build: .
+    container_name: spider_app
+    restart: always
+    depends_on:
+      - db
+      - tor
+    environment:
+      - DB_HOST=db
+      - TOR_HOST=tor
+      - TOR_PORT=9050
     volumes:
-      - ./M/0:/app/M/0
+      - ./.env:/app/.env
+      - ./M/0/seeds.txt:/app/M/0/seeds.txt
+    networks:
+      - spider_net
+
+networks:
+  spider_net:
+    driver: bridge

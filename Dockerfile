@@ -1,18 +1,16 @@
-# Usamos a versão LTS do Node em Alpine para ser ultra-leve (4GB de RAM agradecem)
-FROM node:lts-alpine
+FROM node:22-slim
 
-# Criamos o diretório de trabalho
+# Instala ferramentas básicas de rede para diagnóstico se necessário
+RUN apt-get update && apt-get install -y iputils-ping curl && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /app
 
-# Copiamos apenas o essencial para instalar as dependências (otimiza o cache)
+# Copia pacotes primeiro para aproveitar o cache de camadas
 COPY package*.json ./
 RUN npm install --production
 
-# Copiamos o resto do código
+# Copia o restante do código
 COPY . .
 
-# Garantimos que os logs e achados persistam na estrutura M
-RUN mkdir -p M/0 M/4
-
-# Comando padrão (será sobrescrito pelo compose)
-CMD ["node", "M/3/sniffer.js"]
+# Comando para iniciar o maestro
+CMD ["node", "M/3/just_paste/index.js"]

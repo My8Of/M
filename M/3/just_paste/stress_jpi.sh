@@ -37,16 +37,16 @@ else:
     echo -e "${GREEN}>>> MINEIRANDO ID: $target_id${NC}"
     
     # Executa usando o caminho absoluto detectado
-    node "../M/3/miner_jpi.js" "$target_id"
+    node "miner_jpi.js" "$target_id"
     
     if [ $? -ne 0 ]; then
         echo -e "${RED}!!! BLOQUEIO OU ARQUIVO NÃO ENCONTRADO NO ID $target_id !!!${NC}"
         exit 1
     fi
     
-    if [ -f "M/0/metrics.json" ]; then
-        total=$(grep -oP '"total": \K\d+' M/0/metrics.json)
-        blocked=$(grep -oP '"blocked": \K\d+' M/0/metrics.json)
+    if [ -f "../../0/metrics.json" ]; then
+        total=$(grep -oP '"total": \K\d+' ../../0/metrics.json)
+        blocked=$(grep -oP '"blocked": \K\d+' ../../0/metrics.json)
         echo -e "${YELLOW}Metas: Total=$total | Bloqueios=$blocked${NC}"
     fi
 
